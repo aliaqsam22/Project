@@ -23,6 +23,7 @@ private EditText et1,et2;
             getSupportActionBar().hide();
         }
         button1=findViewById(R.id.button1);
+        button2=findViewById(R.id.button2);
         et1=findViewById(R.id.et1);
         et2=findViewById(R.id.et2);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,14 @@ private EditText et1,et2;
                 else{
                     Toast.makeText(getApplicationContext(),"Invalid Credentials",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
